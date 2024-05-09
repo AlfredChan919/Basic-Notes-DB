@@ -1,0 +1,53 @@
+anything that doesnt change like css javascript or images you put into this folder
+
+<!-- block title means that child templates can change anything inside this block
+        endblock ends the block and child template can overide anythign within it -->
+
+        <!-- url_for is a python function that loads the url for the static folder -->
+    <!-- {{}} 2 squigglies means we are doing to write a python function, we can write a function/variable that could be evaluated -->
+
+
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+#login
+@auth.route('/login')
+def login():
+    return render_template('login.html', boolean = True)
+
+# you can have variables after the path of the html that you can call into your html using {{}}
+
+
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content%}
+<h1>This is the login page</h1>
+{% if boolean == True %}
+Yes it is True!
+{% else %}
+No it is not true.
+{% endif %}
+{% endblock%}
+
+
+elif
+
+<form method="POST"></form>
+when we submit this post, we send a POST to the backend
+
+
+a POST request usually means youre making some kind of chanage toa  DB or a state of the page or website
+so we would POST the fact that we are signing up or signing in with all the information of the page
+
+GET request is getting information, POST request is giving information
+
+data=request.form
+    allows us to access the form data of the request
