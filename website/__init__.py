@@ -32,7 +32,7 @@ def create_app():
     # create_database(app)
 
     login_manager=LoginManager()
-    login_manager.login_view = 'auth.login'
+    # login_manager.login_view = 'auth.login'
     # tells which app login manager is using
     login_manager.init_app(app)
 
